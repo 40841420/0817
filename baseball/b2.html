@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Rubik&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Rubik', sans-serif;
+            /* opacity: 0.97; */
+        }
+
+        .bg {
+            width: 100%;
+            height: 100vh;
+            background-color: #fa0;
+            background: url(https://travel.taichung.gov.tw/content/images/attractions/503/1024x768_Filedata635173602882792968.jpg) no-repeat center bottom;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+            opacity: 1;
+        }
+
+        /* .bg .bg_content {
+
+
+        }
+
+        .bg .bg_content img {
+            
+        } */
+
+        .wrap {
+            width: 80%;
+            /* background-color: #fa0; */
+            height: 80vh;
+            margin: auto;
+            display: flex;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+
+        }
+
+        .wrap .left {
+            width: 35%;
+            height: 100%;
+            background-color: rgb(248, 240, 229, 0.6);
+            position: relative;
+
+
+        }
+
+        .wrap .playball {
+            width: 100%;
+            height: 100%;
+            /* background-color: #fa0; */
+
+        }
+
+        .wrap .playball .title {
+            /* background-color: #000; */
+        }
+
+        .wrap .playball .title h1 {
+            font-size: 5vw;
+            color: #fa0;
+
+            position: absolute;
+            top: 3vw;
+            bottom: 0;
+            right: 0;
+            left: 2vw;
+            margin: auto;
+
+        }
+
+        .wrap .playball .pic {
+            /* background-color: #fa0; */
+            width: 100%;
+            height: 100%;
+            /* background-color: #fff; */
+
+
+        }
+
+        .wrap .playball .pic img {
+            width: 122%;
+            height: 60%;
+            /* background-color: #fff; */
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 2vw;
+            margin: auto;
+
+        }
+
+        /* season */
+        .wrap .playball .season {
+            width: 60%;
+            /* height: 100%; */
+            /* background-color: #faa; */
+
+            position: absolute;
+            top: 10vw;
+            bottom: 0;
+            left: 0;
+            right: 2vw;
+            /* margin: auto; */
+            padding: 10px;
+
+        }
+
+        .wrap .playball .season h1 {
+            color: #fff;
+            font-size: 4vh;
+
+        }
+
+        .wrap .playball .season span {
+            color: #fff;
+            font-weight: 100;
+        }
+
+        .wrap .playball .season .txt {}
+
+        .wrap .playball .season .txt p {
+            font-size: 1.5vh;
+            color: #025464;
+
+        }
+
+        .wrap .left .bot {
+            width: 100%;
+            height: 20%;
+            /* background-color: #102C57; */
+            display: flex;
+
+            position: absolute;
+            top: 100;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+
+        }
+
+        .wrap .left .bot .b_1 {
+            width: 50%;
+            height: 100%;
+            background-color: rgb(200, 228, 178, 0.9);
+            display: flex;
+        }
+
+        .wrap .left .bot .b_1 .pic {
+            width: 50%;
+            margin: auto;
+        }
+
+        .wrap .left .bot .b_1 .pic img {
+            width: 100%;
+
+        }
+
+        .wrap .left .bot .b_1 .txt {
+            width: 50%;
+        }
+
+        .wrap .left .bot .b_1 .txt h1 {
+            text-align: right;
+            margin: 10px;
+            font-size: 1.5vw;
+        }
+
+        .wrap .left .bot .b_2 {
+            width: 50%;
+            height: 100%;
+            background-color: rgb(158, 210, 190, 0.9);
+            display: flex;
+        }
+
+        .wrap .left .bot .b_2 .pic {
+            width: 50%;
+            height: 10vh;
+            margin: auto;
+        }
+
+        .wrap .left .bot .b_2 .pic img {
+            padding: 10px 0 0 20px;
+            width: 80%;
+            height: 80%;
+        }
+
+
+        .wrap .left .bot .b_2 .txt {
+            width: 50%;
+        }
+
+        .wrap .left .bot .b_2 .txt h1 {
+            text-align: right;
+            margin: 5px;
+            font-size: 1.5vw;
+        }
+
+        /* 中間 */
+        .wrap .mid {
+            width: 30%;
+            height: 100%;
+            background-color: rgb(234, 219, 200, 0.9);
+        }
+
+        .wrap .mid h1 {
+            text-align: right;
+            padding: 10px;
+            font-size: 1.5vw;
+        }
+
+        .wrap .mid .round {
+            width: 15vw;
+            height: 15vw;
+            background-color: #EAC696;
+            border-radius: 50%;
+
+            position: absolute;
+            top: -5vw;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .wrap .mid .round h1 {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+            font-size: 8vw;
+            color: #fff;
+
+            position: absolute;
+            top: 5vw;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+        }
+
+        .wrap .mid .round p {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+            font-size: 2vw;
+            color: #fff;
+
+            position: absolute;
+            top: 18vw;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+
+        }
+
+        .wrap .mid .round p {}
+
+        /* 右邊區塊 */
+        .wrap .right {
+            width: 35%;
+            height: 100%;
+            /* background-color: rgb(218, 192, 163,0.9); */
+        }
+
+        .wrap .right .item_1 {
+            width: 100%;
+            height: 30%;
+            background-color: rgb(11, 102, 106, 0.9);
+        }
+
+        .wrap .right .item_1 .title {
+            padding: 20px;
+        }
+
+        .wrap .right .item_1 .title h1 {
+            font-size: 2vw;
+            color: #fff;
+        }
+
+        .wrap .right .item_1 .title h2 {
+            font-size: 2vw;
+            color: #F1C93B;
+        }
+
+        /* 第二區塊 */
+        .wrap .right .item_2 {
+            width: 100%;
+            height: 45%;
+            background-color: rgb(255, 246, 219, 0.9);
+        }
+
+        .wrap .right .item_2 .title {
+            width: 100%;
+            height: 100%;
+            /* background-color: #fff; */
+            /* display: flex; */
+        }
+
+        .wrap .right .item_2 .title .txt {
+            width: 100%;
+            height: 20%;
+        }
+
+        .wrap .right .item_2 .title .txt h1 {
+            text-align: right;
+            padding: 10px;
+            font-size: 1.5vw;
+        }
+
+        .wrap .right .item_2 .title .pic {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+        }
+
+        /* .wrap .right .item_2 .title .pic img {
+            width: 60%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .wrap .right .item_2 .title .pic h1 {
+            text-align: right;
+            padding: 10px 60px 0 0 ;
+        } */
+        /* 第三區塊 */
+        .wrap .right .item_3 {
+            width: 100%;
+            height: 25%;
+            background-color: rgb(196, 193, 164, 0.9);
+            display: flex;
+        }
+
+        /* 第三區塊底下 */
+        .wrap .right .item_3 .item3_b1 {
+            width: 50%;
+            height: 100%;
+            background-color: #EAC696;
+
+        }
+
+        .wrap .right .item_3 .item3_b1 .title {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .wrap .right .item_3 .item3_b1 .title .pic {
+            width: 50%;
+            /* height: 100%; */
+            /* background-color: #fff; */
+            margin: auto;
+        }
+
+        .wrap .right .item_3 .item3_b1 .title .pic img {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .wrap .right .item_3 .item3_b1 .title .txt {
+            width: 50%;
+            /* background-color: #fa0; */
+        }
+
+        .wrap .right .item_3 .item3_b1 .title .txt h1 {
+            width: 100%;
+            /* text-align: right; */
+            margin: 10px;
+            font-size: 1.5vw;
+        }
+
+
+        .wrap .right .item_3 .item3_b2 {
+            width: 50%;
+            height: 100%;
+            background-color: #C8AE7D;
+            display: flex;
+        }
+
+        .wrap .right .item_3 .item3_b2 .title {
+            text-align: right;
+            padding: 10px;
+
+        }
+
+        .wrap .right .item_3 .item3_b2 .pic {
+            width: 50%;
+            margin: auto;
+            padding: 10px;
+            /* background-color: #fff; */
+        }
+
+        .wrap .right .item_3 .item3_b2 .pic img {
+            width: 100%;
+
+        }
+
+        .wrap .right .item_3 .item3_b2 .title {
+            width: 50%;
+        }
+
+        .wrap .right .item_3 .item3_b2 .title h1 {
+            font-size: 1.2vw;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <!-- <div class="bg_content">
+            <img src="" alt="">
+        </div> -->
+        <div class="wrap">
+            <div class="left">
+                <div class="playball">
+                    <div class="title">
+                        <h1>PLAYBALL</h1>
+                    </div>
+                    <div class="season">
+                        <h1>2023 <span>SEAON</span></h1>
+                        <div class="txt">
+                            <p>
+                                Live賽季 / 挑戰模式
+                            </p>
+                            <p>
+                                Live對戰 / HOMERUN RACE
+                            </p>
+                            <p>
+                                生存模式
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="img/58.png" alt="">
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="b_1">
+                        <div class="pic">
+                            <img src="img/公會.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <h1>公會</h1>
+                        </div>
+                    </div>
+                    <div class="b_2">
+                        <div class="pic">
+                            <img src="img/Cup.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <h1>挑戰任務</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mid">
+                <h1>管理</h1>
+                <div class="round">
+                    <h1>86</h1>
+                    <p>OVR</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="item_1">
+                    <div class="title">
+                        <h1>8/10 卡片更新</h1>
+                        <h2>14-A國家金牌世代</h2>
+                    </div>
+                </div>
+                <div class="item_2">
+                    <div class="title">
+                        <div class="txt">
+                            <h1>商店</h1>
+                        </div>
+                        <div class="pic">
+                            
+                            <!-- <img src="img/shop.png" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="item_3">
+                    <div class="item3_b1">
+                        <div class="title">
+                            <div class="pic">
+                                <img src="img/personnel.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <h1>引進球員</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item3_b2">
+                        <div class="pic">
+                            <img src="img/envelope.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h1>信箱</h1>
+                            <h1>保管箱</h1>
+                            <h1>道具交換</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
